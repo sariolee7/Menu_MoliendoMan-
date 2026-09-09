@@ -1,0 +1,64 @@
+/* ===== Footer ===== */
+.footer {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--verde-borde);
+  text-align: center;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 20px;
+  margin-bottom: 14px;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.footer-link:hover {
+  background: var(--verde-suave);
+  color: var(--terracota);
+}
+
+.footer-link--whatsapp {
+  background: #e7f8ee;
+  color: #1ebd5a;
+  font-weight: 600;
+}
+
+.footer-link--whatsapp:hover {
+  background: #d4f2df;
+  color: #1ebd5a;
+}
+
+.footer__copy {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  opacity: 0.75;
+}
+
+/* ===== Responsive: móviles (≤480px) ===== */
+@media (max-width: 480px) {
+  .footer__links {
+    gap: 8px 14px;
+    font-size: 0.75rem;
+  }
+
+  .footer-link {
+    padding: 5px 10px;
+  }
+}

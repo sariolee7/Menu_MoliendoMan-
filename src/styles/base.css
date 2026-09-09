@@ -1,0 +1,147 @@
+/* ===== Variables y reset ===== */
+:root {
+  --cream: #faf7f0;
+  --ink: #2e2620;
+  --ink-soft: #6b5f52;
+  --terracota: #b5482f;
+  --verde-suave: #eef3e9;
+  --verde-borde: #d3e0c8;
+  --ocre-suave: #f5e3c2;
+  --ocre-borde: #eddcb0;
+  --rosa-suave: #fbeaea;
+  --rosa-borde: #f0d0d0;
+  --card-bg: #ffffff;
+  --radius: 14px;
+  --sombra: 0 2px 6px rgba(46, 38, 32, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 3rem;
+  background-image:
+    linear-gradient(rgba(226, 219, 198, 0.35), rgba(245, 233, 203, 0.35)),
+    url('../assets2/fondo.jpg');
+  background-size: 60rem;       /* tamaño fijo del "tile" — ajusta según tu imagen */
+  background-position: top left;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+#center {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 5rem 3.75rem;
+  background: var(--cream);
+  box-shadow: 0 2px 10px rgba(46, 38, 32, 0.2);
+}
+
+/* ===== Header ===== */
+.header {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.hero-title {
+  margin: 0;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 3rem;
+  line-height: 1.1;
+  color: var(--terracota);
+}
+
+.tagline {
+  margin-top: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+}
+
+/* ===== NavBar ===== */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 32px;
+  padding: 6px;
+  border-radius: 999px;
+  background: var(--card-bg);
+  box-shadow: var(--sombra);
+  font-family: Arial, sans-serif;
+}
+
+.nav-link {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.nav-link:hover {
+  color: var(--ink);
+}
+
+.nav-link--active {
+  background: var(--ocre-suave);
+  color: var(--terracota);
+  font-weight: 600;
+}
+
+/* ===== Responsive: tablets (≤768px) ===== */
+@media (max-width: 768px) {
+  #center {
+    max-width: 680px;
+    padding: 1.75rem 2rem 3rem; /* menos aire a los lados */
+  }
+  .hero-title {font-size: 2.4rem;}
+}
+
+/* ===== Responsive: móviles (≤480px) ===== */
+@media (max-width: 480px) {
+  #center {
+    max-width: 360px;
+    margin: auto;
+    padding: 1.25rem 0.75rem 2rem;
+  }
+  .hero-title {font-size: 2.4rem;}
+}
+
+
+/* ===== Responsive: móviles (≤480px) ===== */
+@media (max-width: 360px) {
+  body {
+    margin-top: 1.5rem;
+    background-attachment: scroll; /* "fixed" da problemas de rendimiento/zoom en móvil */
+  }
+
+  #center {
+    max-width: 280px;
+    margin: auto;
+    padding: 1.25rem 0.75rem 2rem; /* menos padding lateral para no ahogar las tarjetas */
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .tagline {
+    font-size: 0.62rem;
+  }
+
+  .navbar {
+    gap: 2px;
+  }
+
+  .nav-link {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+  }
+}

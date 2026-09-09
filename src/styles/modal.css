@@ -1,0 +1,153 @@
+/* ===== Modal: fondo oscuro + contenedor centrado ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(46, 38, 32, 0.6);
+  backdrop-filter: blur(3px); /* desenfoca el fondo detrás del modal */
+  animation: fadeIn 0.2s ease;
+}
+
+.modal {
+  width: 100%;
+  max-width: 420px; /* antes 360px */
+  max-height: 92vh;
+  overflow-y: auto;
+  background: var(--card-bg);
+  border-radius: 20px; /* antes var(--radius) = 14px */
+  box-shadow: 0 20px 50px rgba(46, 38, 32, 0.3);
+  animation: slideUp 0.25s ease;
+}
+
+/* ===== Imagen del plato + botón de cerrar ===== */
+.modal__image-wrap {
+  position: relative;
+  height: 240px; /* antes 180px */
+  background: var(--ocre-suave);
+}
+
+.modal__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 6px rgba(46, 38, 32, 0.2);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.modal__close:hover {
+  background: #fff;
+  transform: scale(1.08);
+}
+
+/* ===== Cuerpo del modal: título, precio, descripción ===== */
+.modal__body {
+  padding: 24px 26px 28px; /* antes 18px 20px 22px */
+  font-family: Arial, sans-serif;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.modal__title {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  font-size: 1.4rem; /* antes 1.15rem */
+  color: var(--ink);
+}
+
+.modal__price {
+  font-weight: 700;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  color: var(--terracota);
+}
+
+.modal__description {
+  margin: 0 0 20px;
+  font-size: 0.92rem; /* antes 0.85rem */
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+/* ===== Additional options (Adicionales) dentro del modal ===== */
+.additional-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 24px;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 12px;
+  background: var(--ocre-suave); /* fondo destacado en vez de solo línea punteada */
+  font-family: Arial, sans-serif;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.additional-options__label {
+  width: 100%;
+  margin-bottom: 2px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* ===== Botón de pedido por WhatsApp ===== */
+.modal__whatsapp-btn {
+  width: 100%;
+  padding: 15px 16px; /* antes 12px 16px */
+  border: none;
+  border-radius: 999px;
+  background: #25d366;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.modal__whatsapp-btn:hover {
+  background: #1ebd5a;
+  transform: translateY(-1px);
+}
+
+/* ===== Animaciones de entrada ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
