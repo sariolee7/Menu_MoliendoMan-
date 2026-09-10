@@ -78,13 +78,13 @@ Los datos que personalizan la carta están centralizados en `src/data/menuData.j
 
 El proyecto debe estar publicado en un repositorio de GitHub. Enlace de entrega:
 
-- **Repositorio:** [Agregar aquí la URL del repositorio de GitHub](https://github.com/)
+- **Repositorio:** [Repositorio de GitHub](https://github.com/sariolee7/Menu_MoliendoMan-.git)
 
 ### Deploy en Vercel
 
 La aplicación puede desplegarse en Vercel conectando el repositorio de GitHub. Vercel detecta el proyecto Vite y utiliza `npm run build` para generar la versión de producción.
 
-- **Aplicación publicada:** [Agregar aquí la URL de la aplicación en Vercel](https://vercel.com/)
+- **Aplicación publicada:** [Aplicación en Vercel](https://menu-moliendo-man.vercel.app/)
 
 ## Instalación y ejecución local
 
@@ -95,7 +95,7 @@ npm install
 npm run dev
 ```
 
-Después, abre la URL indicada por Vite, normalmente `http://localhost:5173`.
+Después, abre la URL indicada por Vite, normalmente `https://menu-moliendo-man.vercel.app/`.
 
 ## Scripts disponibles
 
