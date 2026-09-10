@@ -1,5 +1,8 @@
 # Moliendo Maní
 
+Este restaurante existe realmente y la aplicación cuenta con toda la información correspondiente.
+Por favor, no realizar pedidos si no se encuentra en Popayán, Valle del Cauca.
+
 Aplicación web de una carta gastronómica colombiana desarrollada con React y Vite. Permite explorar desayunos, comidas típicas, bebidas y otros antojos caucanos, consultar el detalle de cada plato y realizar un pedido por WhatsApp.
 
 ## Características
